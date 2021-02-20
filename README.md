@@ -16,18 +16,21 @@ git push -u origin main
 export PATH=$PATH:$(go env GOPATH)/bin
 go get
 go run main.go hello.go
+cd ../main && go run main.go hello.go
 ```
 
 # Build
 
 ```
-go build
+go build -o hello
+cd ../main && go build -o hello
 ./hello
 ```
 
 # Install
 
 ```
+go get
 go install
 bash -c '$(go env GOPATH)/bin/hello'
 ```
@@ -54,4 +57,15 @@ gotest -v
 go test -cover
 go test --coverprofile=cover.txt
 go tool cover -html=cover.txt -o cover.html
+```
+
+# Go Module
+
+```
+mkdir main
+mv hello* main* main/
+mkdir -p nummanip/calc
+mv math* nummanip/calc/
+cd nummanip
+go test ./calc -v
 ```
