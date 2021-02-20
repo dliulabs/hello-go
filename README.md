@@ -37,6 +37,7 @@ bash -c '$(go env GOPATH)/bin/hello'
 ```
 go test 
 go test -v
+go test -run Hello
 ```
 
 # Colorize Tests
@@ -45,4 +46,12 @@ go test -v
 export PATH=$PATH:$(go env GOPATH)/bin
 go get -u github.com/rakyll/gotest
 gotest -v
+```
+
+# Test Coverage
+
+```
+go test -cover
+go test --coverprofile=cover.txt
+go tool cover -html=cover.txt -o cover.html
 ```

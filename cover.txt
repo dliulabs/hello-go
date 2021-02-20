@@ -1,0 +1,5 @@
+mode: set
+github.com/dliulabs/hello/hello.go:5.32,6.20 1 1
+github.com/dliulabs/hello/hello.go:6.20,8.3 1 1
+github.com/dliulabs/hello/hello.go:8.8,10.3 1 1
+github.com/dliulabs/hello/main.go:8.13,14.2 4 0

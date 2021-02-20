@@ -1,8 +1,8 @@
 package main
 
 import (
-	"testing"
 	"fmt"
+	"testing"
 )
 
 func TestHelloEmptyArg(t *testing.T) {
@@ -31,14 +31,17 @@ func TestHelloValidArg(t *testing.T) {
 
 func TestHello(t *testing.T) {
 	emptyResult := hello("")
-	t.Logf("Input: '%v'\n", emptyResult)
-	if emptyResult != "Hello, Dude!" {
+	if emptyResult != "Hello, Mike!" {
 		t.Errorf("hello(\"\") failed, expected '%v', got '%v'", "Hello, Mike!", emptyResult)
+	} else {
+		t.Logf("hello(\"%v\") success, expected '%v', got '%v'", "", "Hello, Mike", emptyResult)
 	}
 
 	result := hello("Mike")
-	t.Logf("Input: '%v'\n", result)
+	expected := fmt.Sprintf("Hello, %v!", "Mike")
 	if result != "Hello, Mike!" {
 		t.Errorf("hello(\"Mike\") failed, expected '%v', got '%v'", "Hello, Mike!", result)
+	} else {
+		t.Logf("hello(\"%v\") success, expected '%v', got '%v'", "Mike", expected, result)
 	}
 }
