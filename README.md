@@ -66,6 +66,19 @@ mkdir main
 mv hello* main* main/
 mkdir -p nummanip/calc
 mv math* nummanip/calc/
+```
+
+## Init a Module
+
+```
+cd nummanip
+go mod init github.com/dliulabs/calc
+go tidy
+```
+
+## Run Test
+
+```
 cd nummanip
 go test ./calc -v
 ```

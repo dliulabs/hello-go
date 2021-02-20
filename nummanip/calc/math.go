@@ -7,7 +7,7 @@ func Add(numbers ...int) (error, int) {
 	sum := 0
 
 	if len(numbers) < 2 {
-		errorMessage := error.RedString("Provide more than 2 numbers and try again.")
+		errorMessage := color.RedString("Provide more than 2 numbers and try again.")
 		return errors.New(errorMessage), sum
 	} else {
 		for _, num := range numbers {
