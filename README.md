@@ -1,3 +1,15 @@
+# Git setup
+
+```
+git init
+git add .
+git commit -m "update repo"
+git branch -M main
+git remote rm origin
+git remote add origin git@github.com:dliulabs/hello-go.git
+git push -u origin main
+```
+
 # Run
 
 ```
@@ -10,6 +22,7 @@ go run main.go hello.go
 
 ```
 go build
+./hello
 ```
 
 # Install

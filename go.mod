@@ -1,4 +1,4 @@
-module hello
+module github.com/dliulabs/hello
 
 go 1.16
 
